@@ -1,3 +1,5 @@
+node_modules/
+*.zip
 servidor.ps1
 Abrir Shizen.bat
-*.zip
+.claude/

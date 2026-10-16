@@ -1,594 +1,134 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Shizen Magazine vol. 01: revista de streetwear e design sustentável para o público jovem. Projeto de conclusão de curso de Gabriel Pena Mota, Bacharelado em Design, Centro Universitário Senac.">
-<meta property="og:title" content="Shizen Magazine">
-<meta property="og:description" content="Streetwear e design sustentável para o público jovem. Leia a revista completa online.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#f4aeb7">
-<link rel="icon" href="t/p001.jpg">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>Shizen Magazine</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Josefin+Sans:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap">
-<style>
-/* Tipografia da revista: Draco (logo e títulos), Oswald (títulos), Minion Pro (texto), Josefin Sans (números) */
-@font-face { font-family: "Draco"; src: url(data:font/otf;base64,T1RUTwAMAIAAAwBAQ0ZGIGRLyuUAAAscAABB80dQT1M+/ToqAABNEAAABsBHU1VCuP+4/gAAU9AAAAAwT1MvMmktaekAAAEwAAAAYGNtYXAv1jS3AAAFmAAABHxoZWFkISUPFQAAAMwAAAA2aGhlYQsnBckAAAEEAAAAJGhtdHgtgOuuAAAKNAAAAOhtYXhwADpQAAAAASgAAAAGbWV0YZTj90QAAFQAAAAGkm5hbWX6iDyOAAABkAAABAhwb3N0AAMAAAAAChQAAAAgAAEAAAABAAAtSJsCXw889QADA+gAAAAA3anlwgAAAADdqeXC/zX/dweFAzkAAAADAAIAAQAAAAAAAQAAAu7/OAAAByv/Nf8rCQEAAQAAAAAAAAAAAAAAAAAAADoAAFAAADoAAAAEBUABkAAFAAACigK7AAAAjAKKArsAAAHfADEBAgAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAABYWFhYAEAAAAF4Au7/OAAAAzkAiQAAAAMAAAAAArwCvAAgACAAAgAAABwBVgABAAAAAAAAABAA1gABAAAAAAABAAUAAAABAAAAAAACAAcABQABAAAAAAADABIAPwABAAAAAAAEAAUADAABAAAAAAAFACIAHQABAAAAAAAGAAwAEQABAAAAAAAIAAoAhwABAAAAAAAJAAkAXQABAAAAAAAKACEAtQABAAAAAAAMACEAZgABAAAAAAANACQAkQABAAAAAAAQAAUAUQABAAAAAAARAAcAVgADAAEECQAAACACkgADAAEECQABAAoA5gADAAEECQACAA4A8AADAAEECQADACQBZAADAAEECQAEAAoA/gADAAEECQAFAEQBIAADAAEECQAGABgBCAADAAEECQAIABQB9AADAAEECQAJABIBoAADAAEECQAKAEICUAADAAEECQAMAEIBsgADAAEECQANAEgCCAADAAEECQAQAAoBiAADAAEECQARAA4BkkRyYWNvUmVndWxhckRyYWNvRHJhY29SZWd1bGFyVmVyc2lvbiAxLjAwMjtGb250c2VsZiBNYWtlciAzLjUuNzEuMDAyO0RyYWNvUmVndWxhckRyYWNvUmVndWxhckF0aGF5YURaTmh0dHBzOi8vd3d3LmJlaGFuY2UubmV0L2F0aGF5YWR6bkF0aGF5YSBEWk5GcmVlIGZvciBwZXJzb25hbCBhbmQgY29tbWVyY2lhbCB1c2VodHRwczovL3d3dy5iZWhhbmNlLm5ldC9hdGhheWFkem6pIDIwMjEgQXRoYXlhRFpOAEQAcgBhAGMAbwBSAGUAZwB1AGwAYQByAEQAcgBhAGMAbwBEAHIAYQBjAG8AUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMQAuADAAMAAyADsARgBvAG4AdABzAGUAbABmACAATQBhAGsAZQByACAAMwAuADUALgA3ADEALgAwADAAMgA7AEQAcgBhAGMAbwBSAGUAZwB1AGwAYQByAEQAcgBhAGMAbwBSAGUAZwB1AGwAYQByAEEAdABoAGEAeQBhAEQAWgBOAGgAdAB0AHAAcwA6AC8ALwB3AHcAdwAuAGIAZQBoAGEAbgBjAGUALgBuAGUAdAAvAGEAdABoAGEAeQBhAGQAegBuAEEAdABoAGEAeQBhACAARABaAE4ARgByAGUAZQAgAGYAbwByACAAcABlAHIAcwBvAG4AYQBsACAAYQBuAGQAIABjAG8AbQBtAGUAcgBjAGkAYQBsACAAdQBzAGUAaAB0AHQAcABzADoALwAvAHcAdwB3AC4AYgBlAGgAYQBuAGMAZQAuAG4AZQB0AC8AYQB0AGgAYQB5AGEAZAB6AG4AqQAgADIAMAAyADEAIABBAHQAaABhAHkAYQBEAFoATgAAAAEAAwABAAAADAAEBHAAAAEYAQAABwAYAAAACgANACAAIQAjACQAJQAmACgAKQArACwALQAuADAAMQAyADMANAA1ADYANwA4ADkAQQBCAEMARABFAEYARwBIAEkASgBLAEwATQBOAE8AUABRAFIAUwBUAFUAVgBXAFgAWQBaAFsAXQBhAGIAYwBkAGUAZgBnAGgAaQBqAGsAbABtAG4AbwBwAHEAcgBzAHQAdQB2AHcAeAB5AHoAewB9AKAArQDAAMEAwgDDAMQAxQDHAMgAyQDKAMsAzADNAM4AzwDRANIA0wDUANUA1gDYANkA2gDbANwA3QDgAOEA4gDjAOQA5QDnAOgA6QDqAOsA7ADtAO4A7wDxAPIA8wD0APUA9gD4APkA+gD7APwA/QD/AXj//wAAAAAACgANACAAIQAjACQAJQAmACgAKQArACwALQAuADAAMQAyADMANAA1ADYANwA4ADkAQQBCAEMARABF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vMp8/wAAAAAF/wBHNcD/AIJdPAX//hl7Bv8AAAAABf8AGuXb//+6/VoF///eeaX//8KShgX//y36j/8AAAAABf/+Wg9f/wAAEuQF///a1b3//7wlSwX/AAAAAP///+/PBf//zBru//+g0bMF///bo7r//74hhwX////IO////6Jz/wAAJOH///97xf///8dU////pEAI///9FWX///qZbgX/AAFjUP///4+PBf//9H0p///hw5n/ABDogv//3b6K/wAg3Fn///mXRQj/A/paNv//OGS/Bf//9jw5///uJYUF///3i7////Cglf//7idS///1UIz//+5uYf8AAAAACP/8mvuO/wAAAAAF///JVTX/AAAAAP//zB6I/wAX+lr//9yDtv8AKYlGCP//DQe5//8pBG4F/wJykxn/AAAAAAX//7cf4P//e+EBBf8BpgVR/wAAAAAF/wBIXMv/AIQe/wX/Aj4uTP8AAAAABf8Aik1D/wD5o5MF/wARjuv/ACAQKP//7Of9/wAnyxz//9wVEv8ABlTxCA4cBrn/BLka5f8CkRMgFf//fWdl///Ec8UF/wACstX/AAAAAAX/+0h5Of/92k9iBf8CcvGM////bHoF/wVIP3j/AmHQXgX/+xu6r///bpqbFf8AJSsq/wAAAAD/ACI89v8AFEna/wAR00n/ACCSlgj/AEqVS/8AiDmkBf/+hIqe/wAAAAAF///ax1j/AAAAAP//3cTX///rqKj//+4r0P//31Q7CP//9GIs///qnmYF///p/y7//9eydgX//+CQ3P//xnyYBf8ADePR///vH5YF/wCyXaL/AIpJqRX/ALvKJ/8AAAAABf//0D94//+ojY0F//9EF0P/AAAAAAX/AurOHP/+jHU/Ff//2tTW/wAAAAD//93D8f//67Ym///uK9D//99tagj//7Vqtf//d8ZcBf8Be3Vi/wAAAAAF/wAlOKj/AAAAAP8AIjsp/wAUV1j/ABHUMP8AIKvFCP8AC53U/wAVYZoF/wAWANL/AChNigX/AB9vJP8AOYNoBf//8hwv/wAQ4GoF//9Nol7//3W1cBX//0Q12f8AAAAABf8AL8Fu/wBXcnMF/wC759f/AAAAAAUOHAcr/wI0N6T/Ab8B/RX/ABN2d/8AI5HhBf8ADrc1/wAa9gwF/wAWz7X/ACmuJwX/AzAx6P8AAAAABf8AMqeJ///9FzL/AC+oPv//6WZE/wAhFQT//9kqdgj/AAKy1f///N6HBf8BU163/wDYNYEF//lhvkb/AAAAAAX/ABrl2///uup2Bf//fGKJ//8PJwkF/wAz0Uf//8QYBQX//46uW///yz6MBf//t3ug//97SsgF/wADfwf/AAZV2P8AAfmI/wADpM7/AAGGZf8AAsW5CP//ze+V//+kZlAF///v037//+JYBf8AFWxm///b2Mz/ACG/B/8AAAAACP8GERhB/wAAAAAF/wB6XB7/AN7+fAX/AFdxjf8AAAAABf8AbmjX/wDJt94F//rw8hX/AAAAAAX/Arffg///W/htFf//w163//+Q8L8F//zuhqL/AAAAAAX/ACScJP8AQwkeBf8AGA0+/wAsBiIFDvkq/wGuPBf/AAK0bBX/ACb1Bf8AR2SHBf8AKSK6/wBLZfwF//9tW0b/AAAAAAX/ANvBIP8BkZv7Bf8AkjNk/wAAAAAF/wBRZ0X/AJUMAQX//i7OPP8AAAAABf//wEui/wAAAAD//8VjC///3R2H///hjof//8f5/gj//5wIjP//R4qYBf//rpfV//9q8/8F//+Ludv//ysRwQX/ADNoCf//waQmBf8B4iX4/wAAAAAF/wABT4X/AAJnRwUO+Sv//2votP8AAtlOFf///q+U///9mLkF/wHiKnf/AAAAAAX/AHgiuf8APlzABf8Adj7H/wDU7j8F/wBSt7H/AJUMAQX/AGcq7P8AuHVoBf8AH0+o/wA4BgL//+vUvP8AIuJ5///ASdX/AAAAAAj//i67Wf8AAAAABf//rTkE//9q8xkF/wCSM2T/AAAAAAX//yFqwv/+bmQFBf//bVws/wAAAAAF///WIUb//7SaBAX//9hQx///uJxfBQ4cBL3/A06sg/8BpZ/UFf8Ab6Zf/wDL5nkF//4xdkb/AAAAAAX/ABmCi///vmpjBf//tG0K//91ryQF//6KO9j/AAAAAAX//7G6Nf//ceSPBf8Bdm1D/wAAAAAF//+QlP///zQZhwX/AZCDVf8AAAAABf8AUCm9/wCSU8YF/wAffKL/ADmSswX/AXSrgf8AAAAABf8AT4NT/wCOG3EFDvf5/wCjgxX/AGgBKhX//xsHbf8AAAAABf//6Y6+/wAAAAD//+tM6P//88Pc///1SVr//+w+4Aj///juKP//8xq/Bf//8rxM///nuhcF///tDcX//909AwX/AAhhXf//9c2VBf8AtKkF/wAAAAAF/wAIl1b//9hHyP//22v1///Wdrr/AAAAAP8AAAAACP8Auecc/wA6z1X//+cmkv8AiI///wAAAAD/AAAAAAgO+i7/AEET7v8BlpiQFf//raeo//9qdSoF/wNWO0D/AAAAAAX/AFOWxv8AlYrWBQ734P//xOq2/wByHf8V///pjr7/AAAAAP//60zo///zw9z///VJWv//7D7gCP//+O8P///zGr8F///yvEz//+e6/QX//+0Nxf//3TwdBf8ACGFd///1zZUF/wDW6K7/AAAAAAX/ABZxQv8AAAAA/wAUoDT/AAw+1/8ACsmK/wATq4kI/wAs9Wn/AFI0XQX//xsHbf8AAAAABQ4cBr7/BypP4v8CfZcKFf8ABKuF/wASSj3///rAAP8AExma///yz1z/AAw64Qj///DXCv8ADiZm///s1wr///7j1////KPX////uFII//+P/XH/AAAAAP/7ubhS/wAAAAD//4/9cf8AAAAACP//djMz/wAAAAD//4EwpP//tLhS//+9+uH//4cFHwj//9UAAP//sMo9Bf//rpwp//9q49cF//+LnCn//ysR7AX///9uFP///c9c///53rj//+lFH/8AD5ma///snCkI/wAQBR///+wHrv8AGJHs/wABq4X/AAH1w/8AACZmCP8Bt3Ck/wAAAAD/AbeCj/8AAAAA/wG3a4X/AAAAAAj/AImrhf8AAAAA/wB+pmb/AEsPXP8AQhcK/wB4wAAI/wBQT1z/AJM1w/8AUFHs/wCTR67/AFBMzf8Ak0o9CP/95p64//8q+FIV//+uh67//2rmZgX//7r9cf//gbXDBf/871ma/wAAAAAF/wDb8KT/AZHFHwX/AxAhSP8AAAAABQ75Tv8AI/Pp/wAAAAAV/wGlIUj/AAAAAAX/AJbKPf8BE2PXBf8Axko9/wFqfXEF/wAAkez/AAJ4Uv8ABM9c/wAWhR////AzM/8AEvMzCP//8Hrh/wASlHv//+mKPf///6PX///9Uez////Zmgj//m6rhf8AAAAABf8AAAAA////7hQF//+u0ez/AAAR7AX//3C64f//ac9cBf8AzvhS/wAAAAAF//77+uH//iQMzQX//9aHrv//5AUf///fkez///PmZv///7hS////7hQI///yqPb///t64QUOHAbi//+UZ7v/AAAAABX/BlwUe/8AAAAABf8AU5cK/wCVh64F//tHTM3/AAAAAAX/AERcKf8AfTXDBf8EM8Uf/wAAAAAF/wBS8KT/AAAAAP8ATF64/wAtQAD/ACe4Uv8ASM9cCP8AgC4U/wDsnCkF/wARRR//AB/Zmv//6OZm/wAmsKT//9vHrv8AAAAACP/9JZR7/wAAAAAF/wAAAAD/AAAUewX/AAA4Uv8AAHCk/wAAOFL/AABeuP8AAEo9/wAAXCkI//yEh67/AAAAAAX/AVNeuP//J8euBf8AArMz/wADI9cF/wAesKT/ACPuFP8AKw9c/wAVszP/AC5uFP8ABXhSCP8C0Trh/wAAAAAF/wACszP/AAAAAP8AAnrh///+eFL/AAFPXP///YUfCP8AAWPX///9czP////uFP///QUf///+nCn///1wpAj//+XFH///z+ZmBf//24zN//+9LhQF//7iaPb/AABKPQX//O3AAP8AAAAABf//rRHs/wAAAAD//7OhSP//0sAA///YR67//7cwpAj//6eZmv//XjrhBQ4cBun/B1HqSv8CpuZmFf//+GuF/wAOD1z///JeuP8ACGFI///wxR//AAAAAAj//SDXCv///2uFBf8AABR7/wAAJmb/AAAj1/8AADXD/wAAEez/AAAmZgj//ISHrv8AAAAABf8BU3Mz//8nx64F/wACszP/AAMj1wX/AB6Zmv8AI+uF/wArJmb/ABW4Uv8ALmuF/wAFdcMI/wLRT1z/AAAAAAX/AAKzM/8AAAAA/wACeFL///54Uv8AAVHs///9h64I/wABYUj///1wpP///+4U///9BR////6cKf///XMzCP//5cUf///P5mYF///bj1z//70uFAX//bgPXP8AALhSBf//cKZm//9pvXEF/wKFq4X/AAAAAAX//7u4Uv//gszNBf/7TSFI/wAAAAAF//+uq4X//2p1wwX/BWj64f8AAAAABf8Ak24U/wAAAAD/AIf64f8AT7hS/wBH7hT/AICzMwj/ACUFH/8AQj1xBf//xaFI/wA3dcMF/wB63Cn/AD6rhQX/AH+Hrv8A8TXDBf8AB7rh/wAOI9f/AAAAAP8AELCk///4a4X/AA4R7AgOHAbZ/wRAsjv/AAACjxX/AaUj1/8AAAAABf8Alseu/wETY9cF/wCYKPb/ARYo9gX/AFAo9v8AklcKBf/+GY9c/wAAAAAF/wAa0ez//7r64QX//+iuFP//1Uo9Bf//65ma///a+uEF//+6+uH//4G1wwX//O9cKf8AAAAABf8AlwAA/wETB64F//4ZoUj/AAAAAAX/ABrj1///uuj2Bf//6bXD///XfXEF///qa4X//9jwpAX///do9v//8EKPBf//k1cK//86XCkF/wAzKPb//8Ho9gX/BGHAAP8AAAAABf//kZma//812ZoF///Wh67//+QCj///35Hs///z6Pb///+1w////+uFCP//8quF///7euEFDhwG5v8GjiKc/wGnsKQV//6rmZr/AAAUewX////rhf///+uFBf/87zhS/wAA3rgF/wAfVHv/ADluFAX/ABShSP8AJcAABf8AAFwp/wAAlHsF/wAQij3/AB5R7AX/AzJPXP8AAAAABf8AMqZm///9FHv/AC+o9v//6Wj2/wAhFwr//9krhQj/AAKwpP///NwpBf8BU3Mz/wDYOFIF//lfj1z/AAAAAAX/ABrhSP//uuuFBf//PW4U//6byj0F/wS2pmb/AAAAAAX//7u64f//gszNBf/7SVcK/wAAAAAF//+uOuH//2p1wwX/BW1Hrv8AAAAABf8Ak2uF/wAAAAD/AIf9cf8AT7rh/wBH7hT/AICwpAj/ACUCj/8AQkAABf8AL/XD/wBXz1wFDhwG8P8FRG7K/wGo7hQV////7hT////uFAX//O84Uv8AAN64Bf8AH1R7/wA5bhQF/wAUsKT/ACWuFAX/AABeuP8AAJR7Bf8AEIo9/wAeUewF/wMyUez/AAAAAAX/ADKj1////RR7/wAvqPb//+lo9v8AIRR7///ZKPYI/wACszP///zcKQX/AVNzM/8A2DhSBf/5X4zN/wAAAAAF/wAa5mb//7rrhQX//vZcKf/+GceuBf8AA4AA/wAGVwr/AAH4Uv8AA6PX/wABij3/AALFHwj//9HUe///q5HsBf//1U9c///izM3//+EHrv//9UzN////tcP////uFAj///Krhf//+3rhBf8AL2FI///jgo8F/wVtRR//AAAAAAX/AJNuFP8AAAAA/wCH/XH/AE+4Uv8AR+4U/wCAszMI/wAlBR//AEJAAAX/AC/wpP8AV8zNBf//zSPX/wA94UgF//4VszP//u0wpBX//O564f8AAAAABf8ARFwp/wB9MzMF/wMRYUj/AAAAAAUOHAb5/wd1QT3/AqWR7BX///hwpP8ADhcK///yXrj/AAheuP//8Mo9/wAAAAAI///RFwr/AAAAAAX/AAAo9v8AAAKPBf/5x1R7/wAAAAAF/wABnrj///74UgX/AVJo9v//KHCkBf8AArMz/wADI9cF/wAeq4X/ACPrhf8AKxHs/wAVtcP/AC5rhf8ABXrhCP8BrMzN/wAAAAAF//tIeFL//dpeuAX/AnQ64f8AAAAABf8FRq4U/wJhLhQF/////XH/AAAFHwX/AAyMzf8AF5HsBf8AB8zN/wAN/XH/AAAAAP8AEMKP///4aPb/AA364QgOHAbo/wdQrpP/AqWXChX///huFP8ADhHs///yXrj/AAhhSP//8MUf/wAAAAAI//msXCn/AAAAAAX/ABrmZv//uuuFBf//fGFI//8PI9cF/wAz0ez//8QcKQX//46uFP//yz1xBf//t3rh//97Sj0F/wADgAD/AAZXCv8AAfhS/wADo9f/AAGFH/8AAsUfCP//zfCk//+kZmYF///v1Hv//+JXCv8AFWuF///b2Zr/ACHAAP8AAAAACP8FIkeu/wAAAAAF/wCTbhT/AAAAAP8Ah/rh/wBPuFL/AEfuFP8AgLXDCP8AJQeu/wBCOuEF///FnCn/ADd1wwX/AHrhSP8APquFBf8Af4eu/wDv+uEF/wAHzM3/AA39cf8AAAAA/wAQwo////ho9v8ADf1xCP/+JzMz//91nCkV///lwo///8/o9gX//9uPXP//vSuFBf/9g2FI/wAAuuEF//9wpmb//2m64QX/ArpcKf8AAAAABf//u7XD//+C3rgF//zufXH/AAAAAAX/ACSmZv8AQx64Bf8Afdwp/wDmXCkF/wATdcP/ACOPXAX/AA61w/8AGvXDBf8AFs9c/wAprhQF/wMELhT/AAAAAAX/AAKzM/8AAAAA/wACeuH///564f8AAVHs///9hR8I/wABXrj///1zM/8AAAAA///9Ao////6Mzf///XMzCA4cBsD/BvWBVP8CHqFIFf8AVhHs/wCdaPYF//qSuFL/AAAAAAX//2yUe/8AAAAA//94BR///7BFH///uA9c//9/TM0I///a+uH//73FHwX//9KZmv//rOj2Bf8AMFHs//+9ZmYF/wFUZmb////rhQX/AAAUe/8AABR7Bf8CeoKP////RR8F/wCPWZr/AJZCjwX//UfAAP8AAAAABf8AREo9/wB9MzMF/wMRhR//AAAAAAX//9JMzf//rGj2Bf//h1Hs//8jCj0F///waPb//+OCjwX///Frhf//5WZmBf//6QzN///V9cMF//zNsKT/AAAAAAX//81Zmv8AAuj2///QVwr/ABaXCv//3uj2/wAm2ZoI///9T1z/AAMhSAX//qyMzf//J8euBf8GX89c/wAAAAAF/wAlvXH/AEUUewX/AQmhSP8B5jrhBf///G4U///5uuH///31w////Fma///+h67///09cQgOHAbc/wdF1TD/AqWUexX///ho9v8ADhHs///yYUj/AAhhSP//8MKP/wAAAAAI//msYUj/AAAAAAX/ABrhSP//uuj2Bf/+z4eu//3SqPYF///VOuH//+K1w///4QUf///1XCn///+j1////9maCP//8quF///7fXEF/wAvOFL//+L9cQX/AaVHrv8AAAAABf8AlgzN/wESvXEF/wMRSj3/AAAAAAX//7oMzf//f6j2Bf//2O4U//+4cKQF///UR67//+HXCv//4Cj2///0/XH///+zM////9wpCP//8quF///7euEF/wAwUez//+L9cQX/AaVHrv8AAAAABf8ATAKP/wCLMKQF/wAmHCn/AEXR7AX/AJLrhf8BDPhSBf8AVJwp/wCa3rgF/wAHzM3/AA3o9v8AAAAA/wAQwo////hrhf8ADg9cCP/+JiuF//9zlHsV///CR67//48MzQX//O8hSP8AAN64Bf8AQ+uF/wB8K4UF/wMEQAD/AAAAAAX/AAKzM/8AAAAA/wACeuH///54Uv8AAU9c///9hR8I/wABY9f///2Hrv///+uF///88KT///6euP///XMzCA4cBtT/B0Xh/f8CpZR7Ff//+Gj2/wAOEez///JhSP8ACGFI///wwo//AAAAAAj/+axhSP8AAAAABf8AGuFI//+66PYF//72YUj//hnKPQX//9irhf//uAo9Bf//10AA///kz1z//99Zmv//9AKP////uFL////uFAj///Krhf//+3rhBf8AL0Uf///jEewF/wVtR67/AAAAAAX/AJNrhf8AAAAA/wCH/XH/AE+4Uv8AR+4U/wCAszMI/wAlFwr/AEI9cQX//8WhSP8AN2FIBf8Aet64/wA+rhQF/wB/h67/AO/64QX/AAe4Uv8ADf1x/wAAAAD/ABDCj///+GuF/wAOD1wI//4nLhT//3WKPRX//+XFH///z+j2Bf//2/XD//+95mYF//2HbhT/AAAAAAX//2KXCv//aoo9Bf8CxGZm/wAAAAAF//+7R67//4IUewX//O59cf8AAAAABf8AJKZm/wBDHCkF/wB92Zr/AOZZmgX/ABN4Uv8AI5R7Bf8ADrhS/wAa9cMF/wAWvXH/ACmuFAX/AwQrhf8AAAAABf8AArCk/wAAAAD/AAJ64f///nXD/wABT1z///2Hrgj/AAF4Uv///XMz////64X///0Cj////pwp///9cKQIDhwGmf8EzuNP/wK79cMV//52nCn/AAAAAAX/AAAAAP///9wpBf//yJ64/wAAEez//8omZv8AAAAA///MxR//AAAR7Aj//hkeuP8AAAAABf8AGuPX//+66PYF/wAAuuH/AAC9cQX//v1wpP/+Jr1xBf//2QKP//+4qPb/ADOrhf//qP1x/wBRQo//AAAAAAj/BXSPXP8AAAAABf8AMzrh/wBjCj0F/wAW9cP/ACeAAAX/AAAAAP8AAAAA//9V64X/AAC4Uv//Hs9c/wAAvXEI///E+FL/AAAj1///wPhS/wAANcP//779cf8AACZmCP//f64U/wAATM3//3feuP8AAEo9//9/go//AAAmZgj//07FH/8AAGj2Bf8A4D1x/wGZgAAF/wMtNcP/AAAAAAX/ADLcKf///Trh/wAvz1z//+lo9v8AITrh///ZAo8I/wACszP///zeuAX/AGrR7P8AQ3rhBf8AAa4U/wAAAAAF/wADgAD/AANuFAX/AObMzf8AkdHsBQ4cBtT/B0Wuyv8CpYKPFf//+GuF/wAOD1z///KFH/8ACGFI///wwo//AAAAAAj/+axzM/8AAAAABf8AGs9c//+6/XEF//7Ph67//dKo9gX//9U64f//4rXD///g8zP///VHrv///7XD////7hQI///yq4X///t64QX/AC84Uv//4wAABf8FMG4U/wAAAAAF/wC51Hv/AAAAAP8ArCFI/wBoXCn/AF9AAP8AqkzNCP8AQH1x/wB2D1wF/wB/h67/AO/4UgX/AAemZv8ADgAA/wAAAAD/ABDCj///+GuF/wAOD1wI//4nQo///3WcKRX//+XCj///z/rhBf//kYeu//81euEF///Q/XH//6nwpP//qco9///LBR///6Ko9v8AAAAACP/9hTCk/wAAAAAF/wBfY9f/AK6ZmgX/AARKPf8AB+FIBf8AUkeu/wCWj1wF/wAUnrj/ACXAAAX/AABcKf8AAJR7Bf8AEIzN/wAeUewF/wMD49f/AAAAAAX/AAJmZv8AAAAA/wACaPb///7mZv8AAXXD///9+FII/wAB49f///1KPf8AACZm///8lHv///5j1////SZmCA4cBrj/Acvuyv8BE3XDFf8CicAA/wAAAAAF/wCdaPb/AJUcKQX//+/AAP8AABHs//9IEez///8zM///Hr1x/wAAuuEI///B+uH/AAAj1///wej2////oUj//7vKPf8AADrhCP//uyPX/wAAI9f///I64f///7XD///m3Cn/AAAmZgj/ABzcKf8ANK4UBf8AKIKP/wBKDM0F/wMjTM3/AAAAAAX/ADao9v8AAAAA/wAz3rj//+kuFP8AI31x///WeFII/wACszP///zeuAX/AVRUe/8A2JR7Bf/9oKj2////oUgF//5jFwr/AAAAAAX/AAAAAP///9wpBf//wBma/wAAEez//8H64f8AABHs///FaPb/AAAAAAj//hZZmv8AAAAABf8AGvXD//+6xR8F//9VsKT//sbcKQX//3q4Uv//DAKPBf///+j2////64UF///VPXH//+K4Uv//4PXD///1Sj3///+1w////+uFCP//8quF///7fXEF/wAvMzP//+MAAAX/AAAAAP////1xBf8GHHMz/wAAAAAF/wCdXCn/AJWKPQX/+z0j1/8AAAAABQ4cBp3/BQwuyv8Cu/XDFf/+YxcK/wAAAAAF/wAAAAD////cKQX//8AZmv8AABHs///B+uH/AAAR7P//xWj2/wAAAAAI////DM3/AAAAAAX/AAA1w/8AAF64Bf/+V89c/wAAAAAF////x67///+hSAX//7+4Uv8AAAAABf8AGsAA//+7R64F//7PFwr//dJXCgX////64f8AAAKPBf//1T1x///iuFL//+D1w///9Uo9////tcP////uFAj///Krhf//+3rhBf8ALzhS///i/XEF/wGn6Pb/AAAAAAX/AJbFH/8BE2ZmBf8Cid64/wAAAAAF/wCb1wr/AJUXCgX//+/AAP8AABR7//9ID1z///8zM///HsAA/wAAuFII///B/XH/AAAmZv//wej2////oUj//7vKPf8AADhSCP//ux64/wAAJmb///OwpP///7XD///m3Cn/AAAj1wj/AEVhSP8Afr1xBf8DK71x/wAAAAAF/wAypmb///0XCv8AL5cK///pZmb/ACEUe///2Sj2CP8AArMz///83rgF/wFWz1z/ANiUewUOHAa//wLCydr/ARNR7BX/AgnHrv8AAAAABf//vAAA//+FIUgF///+jM3///1hSAX///nzM///9SZmBf/88OFI/wAAAAAF/wAF8KT/AArZmgX////64f8AAAAABf8AFJ64/wAl1HsF/wDGSj3/AWt9cQX/Au74Uv8AAAAABf8AAAAA/wAAEewF/wBARR//AAAAAAX/ADKo9v///RcK/wAvlwr//+lmZv8AIRR7///ZKPYI/wACszP///zeuAX/AVR4Uv8A2DXDBf/+hK4U////8KQF//8ctcP/AAAAAAX/AAAAAP8AABHsBf//smPX/wAAAAAF/wAAI9f////uFAX//A064f8AAAAABf8AGtHs//+6xR8F//78eFL//iNUewX//91hSP//uY9c/wAzMKT//6x1w/8AT6Zm/wAAAAAI/wBu6Pb////rhQX/AIICj////+uFBf8AAAAA/wAAFHsF/wMOrhT/AAAAAAX//7hcKf//fYzNBf8B0Mo9/wBPXCkF/wEDpmb/AdteuAX//JzXCv8AAAAABQ4cBt7/BYPAtv8Cu/MzFf8AGtR7//+6/XEF//+PQAD//zGeuAX//O+64f8AAAAABf8Alseu/wETdcMF//4ZfXH/AAAAAAX/ABrPXP//uv1xBf/+z5wp//3SuuEF///Wh67//+QFH///35Hs///z5mb///+4Uv///+uFCP//8qj2///7fXEF/wAvOFL//+MAAAX/AaUj1/8AAAAABf8Alseu/wETY9cF/wMQgAD/AAAAAAX//5HPXP//NjXDBf//1oo9///kAo///9+j1///8+Zm////szP////wpAj///Ko9v//+3hSBf8ALzrh///jAo8F/wGlI9f/AAAAAAX/AX8uFP8Cu/MzBQ74vP8AzdUw/wK78zMV/wAaz1z//7r9cQX//s+cKf/90rrhBf//1oeu///kAo///9+R7P//8+Zm////uFL////uFAj///Ko9v//+3rhBf8ALzhS///jAAAF/wGlI9f/AAAAAAX/AJbZmv8BE2PXBf8A6GZm/wGokewFDhwGpf8HDzw1/wKlgAAV///4a4X/AA4R7P//8l64/wAIYUj///DFH/8AAAAACP/+Wlma/wAAAAAF/wAeYUj//7HhSAX//++cKf//4frhBf//6MAA///VbhQF///2wAD//+8HrgX//y81w//+gWZmBf/83+uF/wAAgo8F/wBPkez/AJJCjwX//jjj1///wYzNBf//1oo9//+0D1wF///zwo///+mPXAX//7XhSP//eE9cBf8Gawo9/wAAAAAF/wFZtcP/AnjCjwX/AAemZv8ADhHs/wAAAAD/ABCwpP//+G4U/wAOD1wIDhwGlv8HajFZ/wK78zMV//1k1wr/AAAAAAX//Ws64f//ISZmBf8AegAA/wDe2ZoF//4Zkez/AAAAAAX/ABrPXP//uw9cBf/+z3hS//3SlHsF////+FL////zMwX//9VFH///4sAA///hAAD///VPXP///7XD////64UI///yq4X///t9cQX/AC84Uv//4v1xBf8AAAAA/////XEF/wGlI9f/AAAAAAX/ALDeuP8BQxmaBf8AnePX/wAAAAAF/wAttcP//8mUewX/AAAUe/8AAAAABf8A4bCk//7zUewF/wHe7hT/AAAAAAX//qomZv8BjjCkBQ4cBqH/AYbK8/8AlXMzFf8ARFma/wB9MzMF/wAAEez/AAAAAAX/AFJHrv8Almj2Bf///9ma/wAAAAAF/wAfVwr/ADluFAX/ABSeuP8AJcAABf8AAF64/wAAlHsF/wAPhR//ABxXCgX/AAA1w/8AAAAABf8AUmuF/wCWtcMF//4Z8KT/AAAAAAX/ABrhSP//uuuFBf/+z4eu//3SuuEF///VOuH//+KzM///4PMz///1Sj3///+1w////+4UCP//8quF///7eFIF/wAvOFL//+MCjwX/BW0zM/8AAAAABf8Ae164/wAAAAD/AHNeuP8AN+PX/wBMhR//AF2j1wgOHAbd/wVdkqH/Arv1wxX//epUe//+t1cKBf//bFwp/wFIpmYF//4Yij3/AAAAAAX/ABtFH///ufhSBf/+0Bma//3TrhQF////bhT///7mZgX//+jAAP//79R7///ngo////MHrv//5jMz///2KPYI///yq4X///t64QX/AC84Uv//4wAABf8BpSPX/wAAAAAF/wDOFHv/AXh4UgX/AJkKPf/+xPhSBf8Ae09c/wAAAAAF/wIKI9f/AVcUewX//0tHrv/+tSZmBf//18Uf//+2ZmYF/wGlIUj/AAAAAAX/AX8uFP8Cu/XDBf/99IzN/wAAAAAFDhwG2v8FwCw7/wK79cMV//8HXCn//jjmZgX//eveuP8BxWuFBf8AAAo9/wAAEewF///+HCn/AAGZmgX//hwj1/8AAAAABf8AGuFI//+61woF//7PmZr//dLPXAX/AAAAAP8AAAAA////D1z///8Mzf///zMz////IUgI///WrhT//+Qo9v//4T1x///1uuH///+1w////9maCP//8quF///7euEF/wAvOFL//+MAAAX/AaUj1/8AAAAABf8A+CFI/wHFRR8F/wIUgAD//jq64QX/AaUj1/8AAAAABf8BfyuF/wK78zMF//5aI9f/AAAAAAUOHAa2/wHK62//ArvzMxX//3YwpP8AAAAA//+BNcP//7S4Uv//vfhS//+HCj0I///VAAD//7DHrgX//66Hrv//auZmBf//i564//8q+uEF/wAzczP//8GhSAX/BSZMzf8AAAAABf8AiauF/wAAAAD/AH6j1/8ASw9c/wBCHCn/AHjAAAj/ARQKPf8B+CPXBf/9w5Hs//7sh64V//+uh67//2rmZgX//7r4Uv//gbhSBf/87164/wAAAAAF/wDb8KT/AZHAAAX/AxAhSP8AAAAABQ4cBrb/B0XDRf8CpYzNFf//+G4U/wAOD1z///JcKf8ACGFI///wxR//AAAAAAj/+axwpP8AAAAABf8AGuPX//+664UF//7Pij3//dK4UgX//9U1w///4rXD///g8zP///VHrv///7hS////8KQI///yqPb///t4UgX/AC84Uv//4wKPBf8Bpjrh/wAAAAAF/wBRHCn/AJWHrgX///+R7P8AAAAABf8ARFwp/wB9MKQF/wD/BR//AAAAAAX/AABMzf///3XDBf8CiA9c/wAAAAAF/wC51Hv/AAAAAP8ArCFI/wBoXCn/AF89cf8Aqk9cCP8AAC4U/wAAUewF/wAtjM3/AFOXCgX/AAfPXP8ADgAA/wAAAAD/ABCwpP//+GuF/wAOD1wI//3P3Cn//ybwpBX//9IHrv//5GuF///Ukez///leuP//6PhS///+HCkI//14T1z/AAC4UgX/AB9R7P8AOW4UBf8AFKFI/wAlwAAF/wAAXrj/AACUewX/AA+FH/8AHFmaBf8DBEAA/wAAAAAF/wAC8zP/AAACj/8AAuZm////+uH/AALzM/8AAAKPCP//8+4U///r9cP//+TwpP//2Rma///OXCn//+I1wwgOHAbG/wcM29v/ArwAABX/+bBeuP8AAAAABf8AGuPX//+66PYF/wABK4X/AAIKPQX//yBZmv/+ZMUfBf///pwp///9eFL///7AAP///XCk///+x67///1wpAj////wpP8AAAo9Bf//30AA///D1woF///dXCn//7mMzf8AMzCk//+seuH/AE+o9v8AAAAACP8AGpcK/wAABR8F/wBtUez/AAAAAAX////64f8AAAo9Bf8CA9Hs/wAAAAAF/wAY64X/AAAAAP8AFRHs/wASpmb/AAMMzf8AGMUfCP8ACMAA///0MzP/AAmeuP//8X1x/wAJZmb//+7j1wj/AAAUe/8AAAAABf8AAi4U///7+uH/AAIKPf//+/1x/wACCj3///wUewj/AAAj1////7Mz/wAAJmb///+hSP8AADhS////tcMI/wABh67///zeuP8AAYeu///88zP/AAFzM////O4UCP8AAEzN////WZr/AABcKf///1R7/wAASj3///9Zmgj/AACo9v///p64/wAAlHv///6uFP8AAJcK///+nrgI/wAAlHv///7Cj/8AAIKP///+wo//AACXCv///sKPCP8AAG4U///+6Pb/AACCj////uZm/wAAcKT///7o9gj/AAAj1////7XD/wAAJmb///+1w/8AABHs////tcMI/wAA3rj///3j1/8AAOPX///98zP/AADKPf///fXDCP8AAAAA////7hQF/wABBR////1euP8AAQUf///9czP/AADzM////XXDCP8AABHs////2Zr/AAAR7P///8eu/wAAEez////Zmgj/AAmzM///5f1x/wAHbhT//909cf8AA0eu///ssKQI/wIjlHv/AAAAAAX//+4R7P8AAyPX//+Nq4X/ACJR7P//vWPX/wBda4UI/wBmY9f/AAAAAAX/AImo9v8AAAAA/wB+qPb/AEsPXP8AQhcK/wB4wAAI/wDulwr/AbPeuAX/ABCwpP8AHnXD///px67/ACWcKf//3N64/wAAAAAI//4RjM3//uyHrhX//66FH///auZmBf//uv1x//+BtcMF//zvXCn/AAAAAAX/ANvuFP8BkcKPBf8DECPX/wAAAAAFDhwHHf8HRdUw/wKljM0V///4aPb/AA4PXP//8mFI/wAIYUj///DFH/8AAAAACP/5rF64/wAAAAAF/wAa4Uj//7rrhQX//s+KPf/90rhSBf//1ThS///itcP//+DzM///9Ueu////uFL////wpAj///Ko9v//+3hSBf8ALzhS///jAo8F/wGlbhT/AAAAAAX/AFGeuP8AlYeuBf///+4U/wAAAAAF/wBEWZr/AH0wpAX/AFI1w/8AlmuFBf8AH1R7/wA5a4UF/wAUoUj/ACXCjwX/AABcKf8AAJHsBf8AEIo9/wAeUewF/wMELhT/AAAAAAX/AAKwpP8AAAAA/wACeuH///54Uv8AAU9c///9hR8I/wABY9f///1zM////+4U///9BR////6cKf///XMzCP//5cKP///P+FIF///bkez//70uFAX//YNcKf8AALhSBf//cKuF//9puuEF/wF5aPb/AAAAAAX/AUKwpP/+7VmaBf8BpSPX/wAAAAAF//74j1z/AOBwpAX/AUUCj/8ApbhSBf8AhI9c/wDyhR8F/wAHq4X/AA4Cj/8AABHs/wAQsKT///hrhf8ADg9cCA4cBqv/BjbYR/8BR/XDFf//i1R7/wAUj1wF//xzVHv/AKB1wwX/AAoMzf8AEnCkBf8ACHXD/wAPYUj/ABArhf8ACZ64/wARkez/AAAAAAj/AwkzM/8AAAAABf8ANqj2/wAAAAD/ADPj1///6AUf/wAjfXH//9Z1wwj/AAKwpP///N64Bf8BU2FI/wDYOFIF//5stcP/AAAAAAX//NgeuP///+uFBf/+WiFI/wAAFHsF/wAAAAD////rhQX//77Zmv8AAAAABf8AGuPX//+664UF/wAASj3///+PXAX//8zo9v//ooAABf//26PX//++MzMF///8uFL///lKPQX///764f///PCk///5Eez//+thSP8AC+FI///q3rgI/wALvXH//+smZv8AFNcK///7DM3/AAM1w////0UfCP8D+lcK//84eFIF///0a4X//+z64QX///eMzf//8J64///v0ez///ZhSP//7nCk/wAAAAAI//ya+FL/AAAAAAX//8lXCv8AAAAA///MHrj/ABf64f//3IKP/wApij0I//8NCj3//ykFHwX/BlYuFP8AAAAABf8AinXD/wD5vXEF/wARoUj/AB/9cf//7Oj2/wAnyj3//9wR7P8ABmj2CA4cBov/B0SLkP8Cu/rhFf/5bNwp/wAAAAAF/wA5kez//2tFHwX/AjOKPf8AAAAABf/++x64//4iYUgF///+1Hv///3euAX//9n1w///5/hS///dWZr///Io9v///7rh////7hQI///yq4X///t9cQX/AC84Uv//4v1xBf8AAAo9/wAADM0F////9cP////wpAX/AaUj1/8AAAAABf8BB7rh/wHikewF/wAHuuH/AA4j1wX/AAzmZv8AF564Bf8AAF64/wAAkewF/wAPhR//ABxZmgX/AAEXCv8AAfhSBf8CNXCk/wAAAAAF/wBQgo//AJS9cQX///7hSP8AAAAA///+NcP/AAAAAP///aFI/////XEIDhwGzv8FuX/q/wK8AAAV//+ulwr//2rmZgX/AAAmZv8AAAAABf//uv1x//+BtcMF//+uhR///2rmZgX//8rwpP//ntmaBf//8AzN///iyj0F//zvWZr/AAAAAAX/ANvwpP8BkcAABf8AAJR7/wAAAAAF/wBR1wr/AJUZmgX//hco9v8AAAAABf8AGuPX//+66PYF/wAAJmb////cKQX//2iR7P/+6IUfBf//1pma//+0I9cF//+Lnrj//yr9cQX/ADNzM///wZ64Bf8FJl64/wAAAAAF/wCJlwr/AAAAAP8Afrrh/wBLD1z/AEIXCv8AeMKPCP8BE/rh/wH4I9cFDhwGrP8HemKD/wK8D1wV//5Ikez/AAAAAAX//X9R7P/+PLMzBf//Maj2/wHDTM0F//45qPb/AAAAAAX/AEC1w///uXhSBf8BIJR7//2KgAAF/wGlI9f/AAAAAAX///8Mzf8AAgo9BQ4cBtz/BYI+Jv8Cu+uFFf8AGtHs//+7D1wF//9XqPb//syMzQX//2b1w/8BOwo9Bf//hLMz/wAAAAAF//312Zr//qjmZgX/ALS64f8BStmaBf8AKDrh/wBJmZoF//4aSj3/AAAAAAX/ABrUe///uw9cBf/+zjXD//3RgAAF///WGZr//+OUe///4Lrh///1kez///+1w////+4UCP//8quF///7euEF/wAvOFL//+MUewX/AAAAAP///+uFBf8CC2FI/wAAAAAF/wIVqPb/AUio9gX/AJOj1//+t1cKBf8BpfMz/wAAAAAF/wFWI9f/AnJcKQX/ACg64f8ASZmaBf/+Gko9/wAAAAAFDhwGXP8G9Ejr/wK8AAAV//2ioUj/AAAAAAX//q/64f//VUAABf//N5cK/wCqwAAF//4/PXH/AAAAAAX/AGW9cf//wDrhBf8BG1R7//8Ox64F//z2zM3//nUFHwX/Al1cKf8AAAAABf8BjjCk/wDKYUgF/wDttcP//zWeuAX/AaUmZv8AAAAABf/+dRcK/wFQdcMFDhwGsv8FrQ5k/wK8BR8V///WUez//7OhSAX//9gj1///t6FIBf//uv1x//+BtcMF//zvWZr////uFAX/AJcAAP8BExmaBf/+GbXD/wAAAAAF/wAa0ez//7ro9gX//+mwpP//12j2Bf//6oKP///Y8KQF///3Zmb///BCjwX//5NZmv//Ol64Bf8AMyj2///B+uEF/wICgAD/AAAAAAX//5GCj///NcUfBf////Mz////49cF///VSj3//+LHrv//4QKP///1TM3///+1w////+4UCP//8quF///7fXEF/wAvOFL//+L9cQX/AAACj/8AAAUfBf8BpSFI/wAAAAAF/wCXAAD/ARPUewX/AmIHrv8AAAAABf8A5UUf/wGoI9cF//5aQo//AAAAAAUOHAZm/wTujgr/AJWXChX//fUZmv8AAAAABf8DtMeu/wHogo8F///M64X/AD3rhQX/+n6zM/8AAAAABf8AAAKP/wAAB64F///roUj////4UgX/AACcKf8AAAAABf//w7hS//+ST1wF///qgAD//9jwpAX///dmZv//8EKPBf//27XD//+9+uEF/wCKPXH/ADI1wwX/ADdzM/8AFB64/wA6hR//AApCj/8AOwo9/wAAOuEI/wIFjM3/AAAAAAX/+8Uo9v/92bhSBf8GVi4U/wAAAAAF/wB+I9f/AOaAAAX//3XCj///zco9Bf//x7rh///rq4X//8TUe///9ZR7///EUez/AAAAAAgO+Sz/APQEf/8Cu/QEFf//aorB//7sidMF//+uhdf//2rlmwX//2mDMf/+7Jy3Bf8COCFS/wAAAAAF/wABT4X/AAJnRwX////tHP///9o4Bf8AJv0e/wBHatMF/wApQGn/AEttLgX//20n//8AAAAABf8A2+4Z/wGRwN0F/wCSVnn/AAAAAAX/AFF6Kf8AlRl/BQ75MP8A74bH/wK79AQV//+tJiD//2rmgQX/AJJTxv8AAAAABf//ITlK//5uPyMF//9tOuP/AAAAAAX//9YZLf//tJLSBf//2Fqs//+4lS0F/wAAAAD/AAAlyAX///6vlP///Zi5Bf8COCFS/wAAAAAF/wCZCd3/ARNjSQX/AFLaxv8AlRplBf8AmfvW/wETdi0FDvlo/wGXPPn/Arv0BBX//8A6i/8AAAAA///FVYz//90Z7f//4Yru///H9X4I//+n0nP//119BQX//63Miv8AAAAABf//m/IP//9J0XwF/wBSx+L/AAAAAAX//5G/pP//Ng92Bf8AM3EH///BndoF/wHik7b/AAAAAAX/AAFQbP8AAmgtBf///+0c////2jgF/wAm/Df/AEdq0wX/ACkthf8AS20uBf//bTrj/wAAAAAF/wBDVK3/AIICYgX/AAmxyf8AErp2///7Han/ABbhs///73Xx/wANHewI///khp//ABXdvQX/AEDvNP8AIRUFBf8AInhV/wARjuv/ABxqc/8AG58o/wASl2L/ACH2zQj/AC1mwP8AUu2qBf8AklPG/wAAAAAF/wBRein/AJUZfwX//i5myv8AAAAABQ75aP8Cv8+R/wK79AQV//4uZ7H/AAAAAAX//61wyf//auaBBf8AklPG/wAAAAAF///SKND//60SVgX//+0zjP//3gk0///+CSr//+Rg2P8ADyem///ucRQI/wAckSH//98P3QX//8x5Yv//6iJDBf//4Rp8///y4hP//+HTyv//6R1n///1JkX//+1GcAj//7RHQ///ff2eBf//bTrj/wAAAAAF///WPg///7SS0gX//9htkP//uJYUBf8AABLk/wAAEuQF///+r5T///2X0wX/AeKUnP8AAAAABf8AeBfu/wA+YiYF/wBvyXT/AMndpgX/AFLJr/8AAAAABf8AZFmB/wC2LoQF//+tzIr/AAAAAAX/AFqU0/8AooL7Bf8AH0Td/wA4C2j//+u9WP8AIuYT///AOor/AAAAAAgO+ocOiw4AAAEAAAAKADAAPgACREZMVAAObGF0bgAaAAQAAAAA//8AAQAAAAQAAAAA//8AAQAAAAFrZXJuAAgAAAABAAAAAQAEAAIAAAACAAoCPgABADAABAAAABMAWgCAAKYAzADyAQQBIgEsAUIBUAFmAYgBmgHEAcoB2AHuAggCFgABABMAEAASABcAGwAcAB0AHgAfACAAJAAlACkAKwAsAC0ALwAxADIAMwAJABH/4gAS/9wAE//TABT/3QAV/90AFv/eABf/zgAY/90AGf/wAAkAEP/xABH/4wAT/9MAFP/cABX/3QAW/+AAF//PABj/3QAZ//AACQAQ/9MAEf/iABL/4QAT/9gAFP/rABX/2gAW/9cAGP/ZABn/1AAJAAX/3gAK//sADv/4ACz/+AAx//QAMv/3ADT/+wA2//QAN//yAAQACv/uAA7/zwAo/+sANv/UAAcABf/eACz/+AAx//MAMv/4ADT/+wA2//oAN//vAAIADv/TADb/1gAFAAr/+AAO/78AI/9zACj/1wA2/8wAAwAF//AANv/7ADf/+QAFAAr/+AAO/8oAI//dACj/1wA2/9AACAAF/+YADv/OACz/zwAt/14AL/9qADL/iwAz/+UANv/OAAQABf/uAA7/8AAj/6IANv/4AAoABf/WAAr/5wAO/9QAIwAFACj/7wAt/8cAL//JADEAEgAy/7sANv/WAAEANv/4AAMADv+7ACP/cAA2/80ABQAK//gADv/IACP/gAAo/9gANv/QAAYABf/pAAr/5AAO/84AIwADACj/7QA2/9IAAwAF//cAI//wADf/+AAHAAX/4gAO//QALP/1AC3/yQAv/8sAMv/AADb/4wACAwgABAAAA0wDxgATABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9AAA/93/1P/c/97/4f/P/97/8QAAAAAAAAAAAAAAAAAAAAAAAAAA//H/4v/bAAD/3P/d/93/zv/d/+0AAAAAAAAAAAAAAAAAAAAAAAAAAP/w/9L/7//n//kAAP/k/9P/5//jAAAAAAAAAAAAAAAAAAAAAP/y/+4AAAAAAAAAAAAAAAAAAAAAAAAAAP/0//EAAAAAAAAAAAAAAAD/7//eAAAAAAAAAAAAAAAAAAAAAAAAAAD/9P/xAAAAAAAAAAAAAAAAAAD/vgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//kAAAAAAAAAAP/o//j/8f/tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//j/9f/xAAAAAAAAAAD/yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/LAAAAAAAAAAAAAAAAAAAAAP+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/xgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/4/84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9wAAAAAAAAAAAAEAIAAKABEAEwAUABUAFgAYABkAGgAbAB0AHwAgACEAIgAjACQAJQAmACcAKAApACoAKwAtAC4ALwAwADIAMwA0ADUAAQAAADoAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAADAAIABAAEAAAAAwACAAkABQAAAAYAAAAHAAgACQAJAAkACgALAAkACQAMAA0ADAAOAAAADwAMABAACQAAABEAEgABAAIAAAAAAAAAAAABAAAAOgAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAwAAAAQAAAAEAAUABgAHAAgACQAKAAsADAANAA4AEAAQAA8AEAAQABAADwAQABAAAAAQABAAEAAQAAAAEAAPABAAAAAAAA8AAAAQAAAAAAAAABEAAwASABMAAAAAAAEAAAAKACwALgACREZMVAAObGF0bgAYAAQAAAAA//8AAAAEAAAAAP//AAAAAAAAAAAAAQAAAAAAAAAcAAAAAWZzbGYAAAAcAAAGdnsiZXh0VmVyc2lvbiI6IjMuNS43Iiwic2NhbGluZ0ZhY3RvciI6My41MTM3NjUxNDc1MTQwOTYsInNwYWNpbmciOnsidXBwZXJjYXNlIjp7Im1vZGUiOiJzbWFydCIsImJlYXJpbmciOjQ1LCJmb250U2xhbnQiOjAuNTAwODU1NDQxODMzOTAyN30sImxvd2VyY2FzZSI6eyJtb2RlIjoiZGVmYXVsdCIsImJlYXJpbmciOjUwfSwiZGlnaXRzIjp7Im1vZGUiOiJzbWFydCIsImJlYXJpbmciOjQ1LCJmb250U2xhbnQiOjAuNTAwODU1NDQxODMzOTAyN30sInB1bmN0dWF0aW9uIjp7Im1vZGUiOiJkZWZhdWx0IiwiYmVhcmluZyI6NTB9LCJvdGhlcnMiOnsibW9kZSI6InNtYXJ0IiwiYmVhcmluZyI6NDUsImZvbnRTbGFudCI6MC41MDA4NTU0NDE4MzM5MDI3fSwiZXhjZXB0aW9ucyI6e319LCJhcHBsaWNhdGlvbiI6IklMTFVTVFJBVE9SIiwiYnVpbGRSYW5kb20iOiJmYWZmNyIsImtlcm5pbmdHcm91cHMiOnsibGVmdCI6eyI0MCI6eyJnbHlwaHMiOlsxMCw1Ml0sIklEIjoxfSwiNDkiOnsiZ2x5cGhzIjpbMTcsMjAsMjUsNTNdLCJJRCI6Mn0sIjUxIjp7ImdseXBocyI6WzE5LDI0XSwiSUQiOjN9LCI1MyI6eyJnbHlwaHMiOlsyMSwyMl0sIklEIjo0fSwiNjYiOnsiZ2x5cGhzIjpbMjddLCJJRCI6NX0sIjY4Ijp7ImdseXBocyI6WzI5XSwiSUQiOjZ9LCI3MCI6eyJnbHlwaHMiOlszMV0sIklEIjo3fSwiNzEiOnsiZ2x5cGhzIjpbMzJdLCJJRCI6OH0sIjcyIjp7ImdseXBocyI6WzMzLDI2LDM0LDM1LDM4LDM5LDQ4XSwiSUQiOjl9LCI3NSI6eyJnbHlwaHMiOlszNl0sIklEIjoxMH0sIjc2Ijp7ImdseXBocyI6WzM3XSwiSUQiOjExfSwiNzkiOnsiZ2x5cGhzIjpbNDAsNDIsNDZdLCJJRCI6MTJ9LCI4MCI6eyJnbHlwaHMiOls0MV0sIklEIjoxM30sIjgyIjp7ImdseXBocyI6WzQzXSwiSUQiOjE0fSwiODQiOnsiZ2x5cGhzIjpbNDVdLCJJRCI6MTV9LCI4NiI6eyJnbHlwaHMiOls0N10sIklEIjoxNn0sIjg5Ijp7ImdseXBocyI6WzUwXSwiSUQiOjE3fSwiOTAiOnsiZ2x5cGhzIjpbNTFdLCJJRCI6MTh9fSwicmlnaHQiOnsiMzMiOnsiZ2x5cGhzIjpbNV0sIklEIjoxfSwiNDAiOnsiZ2x5cGhzIjpbMTBdLCJJRCI6Mn0sIjQxIjp7ImdseXBocyI6WzExLDUzXSwiSUQiOjN9LCI0NCI6eyJnbHlwaHMiOlsxMywxNV0sIklEIjo0fSwiNDgiOnsiZ2x5cGhzIjpbMTZdLCJJRCI6NX0sIjQ5Ijp7ImdseXBocyI6WzE3XSwiSUQiOjZ9LCI1MCI6eyJnbHlwaHMiOlsxOF0sIklEIjo3fSwiNTEiOnsiZ2x5cGhzIjpbMTldLCJJRCI6OH0sIjUyIjp7ImdseXBocyI6WzIwXSwiSUQiOjl9LCI1MyI6eyJnbHlwaHMiOlsyMV0sIklEIjoxMH0sIjU0Ijp7ImdseXBocyI6WzIyXSwiSUQiOjExfSwiNTUiOnsiZ2x5cGhzIjpbMjNdLCJJRCI6MTJ9LCI1NiI6eyJnbHlwaHMiOlsyNF0sIklEIjoxM30sIjU3Ijp7ImdseXBocyI6WzI1XSwiSUQiOjE0fSwiNjciOnsiZ2x5cGhzIjpbMjgsMzIsNDIsNDZdLCJJRCI6MTV9LCI3MiI6eyJnbHlwaHMiOlszMywyNiwyNywyOSwzMCwzMSwzNCwzNiwzNywzOCwzOSw0MSw0Myw0OF0sIklEIjoxNn0sIjkxIjp7ImdseXBocyI6WzUyXSwiSUQiOjE3fSwiMTIzIjp7ImdseXBocyI6WzU0XSwiSUQiOjE4fSwiMTI1Ijp7ImdseXBocyI6WzU1XSwiSUQiOjE5fX19LCJtaXNzaW5nQ2FzZVN1YnN0aXR1dGlvbiI6Mn0AAA==) format("opentype"); font-display: swap; }
-@font-face { font-family: "Shizen Minion"; src: local("Minion Pro"), local("MinionPro-Regular"); font-weight: 400; }
-@font-face { font-family: "Shizen Minion"; src: local("Minion Pro Bold"), local("MinionPro-Bold"), local("Minion Pro Semibold"), local("MinionPro-Semibold"); font-weight: 600 700; }
-@font-face { font-family: "Shizen Minion"; src: local("Minion Pro Italic"), local("MinionPro-It"); font-style: italic; }
-/* Layout: the whole site sits inside the magazine's thick page frame (pink by day, ink-black by night); the reader is always a dark "light table". */
-:root {
-  --frame: #f4aeb7;      /* moldura da página */
-  --brand: #f4aeb7;      /* rosa Shizen (logo, destaques) */
-  --paper: #fde9ef;      /* fundo do conteúdo */
-  --ink: #17110f;        /* texto */
-  --ink-soft: #5b4549;   /* texto secundário */
-  --hot: #e2445c;        /* rosa forte */
-  --stroke: #17110f;     /* contorno do logo */
-  --tick-bg: #17110f; --tick-fg: #f4aeb7; --tick-sep: #fde9ef;
-  --table: #141012;      /* fundo do leitor (sempre escuro) */
-  --r-fg: #fde9ef;       /* texto do leitor */
-  --display: "Draco", "Arial Black", system-ui, sans-serif;
-  --cond: "Oswald", "Arial Narrow", "Roboto Condensed", sans-serif;
-  --serif: "Shizen Minion", "Minion Pro", "Crimson Pro", Georgia, serif;
-  --num: "Josefin Sans", "Oswald", system-ui, sans-serif;
-  --frame-w: clamp(8px, 2vw, 24px);
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --frame: #2a1a1f; --brand: #f4aeb7; --paper: #140e10; --ink: #fbe6ec; --ink-soft: #c4a4ac; --hot: #ff6f88; --stroke: #f4aeb7;
-    --tick-bg: #f4aeb7; --tick-fg: #17110f; --tick-sep: #8a3a4a;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --frame: #2a1a1f; --brand: #f4aeb7; --paper: #140e10; --ink: #fbe6ec; --ink-soft: #c4a4ac; --hot: #ff6f88; --stroke: #f4aeb7;
-  --tick-bg: #f4aeb7; --tick-fg: #17110f; --tick-sep: #8a3a4a;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { background: var(--frame); color: var(--ink); font-family: var(--serif); font-size: clamp(17px, 1.1vw + 12px, 19px); line-height: 1.5; overflow-x: hidden; transition: background-color .3s ease, color .3s ease; }
-img { max-width: 100%; }
-.sheet { background: var(--paper); margin: var(--frame-w); overflow: hidden; transition: background-color .3s ease; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--hot); outline-offset: 3px; }
-h1, h2, h3 { text-wrap: balance; margin: 0; }
-
-/* wordmark: Draco, a mesma fonte do logo da capa (já é itálica e larga) */
-.wordmark { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: 0; display: inline-block; line-height: .9; white-space: nowrap; color: var(--brand); -webkit-text-stroke: 1.5px var(--stroke); }
-
-/* a Draco não tem acentos: o agudo é desenhado à mão, como no "SUMÁRIO" da revista */
-.wordmark .acc { position: relative; display: inline-block; }
-.wordmark .acc::after { content: ""; position: absolute; left: 46%; top: -.2em; width: .34em; height: .1em; background: var(--brand); outline: 1.5px solid var(--stroke); transform: skewX(-40deg) rotate(-24deg); transform-origin: left bottom; }
-.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-
-/* top bar */
-.top { display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; padding-block: 16px; flex-wrap: wrap; }
-.top .wordmark { font-size: 24px; -webkit-text-stroke-width: 1px; text-decoration: none; }
-.top-right { display: flex; align-items: center; gap: 10px clamp(12px, 2.4vw, 28px); flex-wrap: wrap; }
-.top nav { display: flex; gap: 4px clamp(12px, 2.4vw, 28px); font-family: var(--cond); text-transform: uppercase; letter-spacing: .08em; font-size: 14px; flex-wrap: wrap; }
-.top nav a { text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
-.top nav a:hover { border-color: var(--hot); }
-.theme-btn { all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 12px 0 6px; border: 1.5px solid var(--ink); border-radius: 999px; font-family: var(--cond); text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--ink); }
-.theme-btn:hover { border-color: var(--hot); color: var(--hot); }
-.theme-btn:focus-visible { outline: 3px solid var(--hot); outline-offset: 2px; }
-.theme-btn .knob { width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-size: 13px; line-height: 1; }
-
-/* hero */
-.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(12px, 3vw, 40px) clamp(40px, 6vw, 80px); }
-.hero-text { min-width: 0; container-type: inline-size; }
-.edition { font-family: var(--cond); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); display: flex; gap: 6px 10px; flex-wrap: wrap; align-items: center; }
-.edition b { background: var(--ink); color: var(--paper); padding: 2px 8px; font-weight: 500; }
-.hero h1 { margin-top: 16px; display: grid; gap: 14px; }
-.hero h1 .wordmark { font-size: clamp(26px, 10cqw, 140px); -webkit-text-stroke-width: 2px; transform-origin: left bottom; }
-.hero .sub { font-family: var(--cond); font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 3vw, 38px); line-height: 1.05; max-width: 18ch; }
-.tagline { font-family: var(--cond); text-transform: uppercase; letter-spacing: .2em; font-size: 14px; color: var(--hot); margin: 14px 0 0; }
-.hero .by { margin: 14px 0 0; color: var(--ink-soft); }
-.hero .by strong { color: var(--ink); font-weight: 500; }
-.actions { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
-.btn { font-family: var(--cond); text-transform: uppercase; letter-spacing: .1em; font-size: 16px; font-weight: 500; padding: 13px 22px; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform .15s ease, box-shadow .15s ease; }
-.btn.solid { background: var(--ink); color: var(--paper); }
-.btn:hover { transform: translate(-3px, -3px); box-shadow: 3px 3px 0 var(--hot); }
-.cover-btn { border: 0; padding: 0; background: none; cursor: zoom-in; justify-self: center; width: min(100%, 400px); transform: rotate(2.5deg); transition: transform .3s ease; }
-.cover-btn:hover { transform: rotate(0deg) scale(1.02); }
-.cover-btn img { display: block; width: 100%; height: auto; box-shadow: 14px 16px 0 var(--ink); }
-
-/* ticker */
-.ticker { background: var(--tick-bg); color: var(--tick-fg); overflow: hidden; white-space: nowrap; font-family: var(--cond); font-size: 18px; text-transform: uppercase; letter-spacing: .12em; padding-block: 12px; }
-.ticker span { display: inline-block; padding-left: 100%; animation: tick 40s linear infinite; }
-.ticker i { font-style: normal; color: var(--tick-sep); margin-inline: 18px; }
-@keyframes tick { to { transform: translateX(-100%); } }
-@media (prefers-reduced-motion: reduce) { .ticker span { animation: none; padding-left: 16px; } }
-
-section { padding-block: clamp(44px, 7vw, 96px); }
-.head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; margin-bottom: clamp(22px, 4vw, 44px); }
-.head { container-type: inline-size; }
-.head h2 { min-width: 0; max-width: 100%; }
-.head h2 .wordmark { font-size: clamp(24px, 6.2cqw, 76px); white-space: normal; }
-.head p { font-family: var(--cond); text-transform: uppercase; letter-spacing: .1em; font-size: 14px; color: var(--ink-soft); margin: 0; }
-
-/* seções da revista */
-.sections { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: clamp(14px, 2.4vw, 28px); }
-.sections li { min-width: 0; }
-.sections button { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; width: 100%; min-width: 0; }
-.sections .img { position: relative; overflow: hidden; background: var(--frame); }
-.sections img { width: 100%; height: auto; aspect-ratio: 320 / 453; object-fit: cover; display: block; transition: transform .35s ease; }
-.sections button:hover img { transform: scale(1.04); }
-.sections button:focus-visible { outline: 3px solid var(--hot); outline-offset: 4px; }
-.sections .num { position: absolute; left: 0; top: 0; background: var(--ink); color: var(--paper); font-family: var(--num); font-weight: 700; font-size: 15px; letter-spacing: .02em; padding: 6px 10px 3px; font-variant-numeric: tabular-nums; }
-.sections .t { font-family: var(--cond); text-transform: uppercase; font-weight: 700; font-size: clamp(19px, 1.6vw + 10px, 26px); line-height: 1.05; }
-.sections .t small { display: block; font-family: var(--serif); text-transform: none; font-weight: 400; font-size: 16px; color: var(--ink-soft); margin-top: 4px; line-height: 1.3; }
-
-/* sobre */
-.about { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); }
-.about .text { min-width: 0; max-width: 62ch; }
-.about .text p { margin: 0 0 1em; }
-.about .text p:first-child::first-letter { font-family: var(--cond); font-weight: 700; float: left; font-size: 4.2em; line-height: .82; margin: .06em .1em 0 0; color: var(--hot); }
-.facts { display: grid; gap: 22px; align-content: start; min-width: 0; }
-.fact h3 { font-family: var(--cond); font-weight: 500; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; color: var(--ink-soft); margin-bottom: 4px; }
-.fact p { margin: 0; font-family: var(--cond); font-size: 19px; line-height: 1.3; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { font-family: var(--cond); font-size: 15px; text-transform: uppercase; letter-spacing: .06em; border: 1.5px solid var(--ink); padding: 3px 10px; }
-.chip.ods { background: var(--ink); color: var(--paper); }
-
-/* todas as páginas */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(30%, 108px), 1fr)); gap: clamp(10px, 1.6vw, 18px); }
-.grid button { all: unset; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; min-width: 0; }
-.grid img { width: 100%; height: auto; aspect-ratio: 320 / 453; object-fit: cover; display: block; background: var(--frame); transition: transform .15s ease, box-shadow .15s ease; }
-.grid button:hover img, .grid button:focus-visible img { transform: translate(-3px, -3px); box-shadow: 3px 3px 0 var(--ink); }
-.grid button:focus-visible { outline: 3px solid var(--hot); outline-offset: 2px; }
-.grid span { font-family: var(--num); font-weight: 700; font-size: 14px; letter-spacing: .02em; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-
-/* rodapé com a barra de cor de gráfica */
-footer { border-top: 2px solid var(--ink); padding-block: 36px 28px; }
-.foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: end; }
-.foot .wordmark { font-size: clamp(28px, 5vw, 54px); }
-.foot p { margin: 0; font-family: var(--cond); font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
-.colorbar { display: flex; height: 14px; margin-top: 28px; max-width: 420px; border: 1px solid var(--ink); }
-.colorbar i { flex: 1; }
-
-@media (max-width: 820px) {
-  .hero { grid-template-columns: 1fr; }
-  .cover-btn { width: min(80%, 340px); order: -1; }
-  .about { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .top { justify-content: center; }
-  .top-right { justify-content: center; }
-  .top nav { justify-content: center; }
-  .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sections .t small { display: none; }
-  .actions .btn { flex: 1 1 auto; justify-content: center; }
-}
-
-/* ---------- leitor (sempre escuro) ---------- */
-.reader { position: fixed; inset: 0; z-index: 50; background: var(--table); color: var(--r-fg); display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: dark; }
-.reader[hidden] { display: none !important; }
-.rbar { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 12px; font-family: var(--cond); text-transform: uppercase; letter-spacing: .1em; font-size: 14px; }
-.rbar .wordmark { font-size: 16px; -webkit-text-stroke: 0; }
-.rtools { display: flex; gap: 6px; align-items: center; }
-.ibtn { all: unset; box-sizing: border-box; cursor: pointer; font-family: var(--cond); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--r-fg); border: 1.5px solid rgba(253, 233, 239, .35); height: 36px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
-.ibtn:hover { border-color: var(--brand); color: var(--brand); }
-.ibtn:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
-.ibtn[aria-pressed="true"] { background: var(--brand); color: var(--table); border-color: var(--brand); }
-.ibtn .ic { font-size: 16px; line-height: 1; }
-.stage { position: relative; flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; touch-action: pan-y pinch-zoom; }
-.spread { position: relative; display: flex; align-items: center; justify-content: center; }
-.spread img.pg { display: block; user-select: none; -webkit-user-drag: none; background: rgba(253, 233, 239, .06); }
-/* sombra da lombada entre as duas páginas */
-.spread.two::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 60px; transform: translateX(-50%); background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.22) 48%, rgba(0,0,0,.3) 50%, rgba(0,0,0,.22) 52%, rgba(0,0,0,0)); pointer-events: none; z-index: 1; }
-.spread.fade { animation: fade .25s ease; }
-@keyframes fade { from { opacity: .3; } to { opacity: 1; } }
-
-/* folha virando */
-.leaf { position: absolute; z-index: 4; pointer-events: none; transform-style: preserve-3d; will-change: transform; }
-.leaf.spine-l { transform-origin: left center; }
-.leaf.spine-r { transform-origin: right center; }
-.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; background: #f6e4ea; }
-.face img { display: block; width: 100%; height: 100%; }
-.face.back { transform: rotateY(180deg); }
-.face .shade { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
-/* o lado da lombada escurece conforme a folha levanta */
-.spine-l .face.front .shade, .spine-r .face.back .shade { background: linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.08) 55%, rgba(255,255,255,.08)); }
-.spine-r .face.front .shade, .spine-l .face.back .shade { background: linear-gradient(to left, rgba(0,0,0,.55), rgba(0,0,0,.08) 55%, rgba(255,255,255,.08)); }
-.under-shade { position: absolute; z-index: 3; pointer-events: none; opacity: 0; }
-
-.stage.zoomed { display: block; overflow: auto; touch-action: auto; }
-.stage.zoomed .spread { flex-direction: column; gap: 8px; padding-block: 8px; }
-.stage.zoomed .spread.two::after { display: none; }
-.nav { all: unset; box-sizing: border-box; position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-size: 34px; line-height: 1; color: var(--r-fg); background: rgba(20, 16, 18, .55); z-index: 6; }
-.nav:hover { color: var(--brand); background: rgba(20, 16, 18, .8); }
-.nav:focus-visible { outline: 2px solid var(--brand); outline-offset: -4px; }
-.nav.prev { left: 6px; } .nav.next { right: 6px; }
-.nav:disabled { opacity: .15; cursor: default; }
-.stage.zoomed .nav { display: none; }
-.rbottom { flex: 0 0 auto; }
-.rfoot { display: flex; align-items: center; gap: 12px; padding: 6px 14px 10px; font-family: var(--cond); font-size: 14px; letter-spacing: .08em; font-variant-numeric: tabular-nums; }
-.rfoot .sec { flex: 0 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: uppercase; color: var(--brand); max-width: 30%; }
-.rfoot input[type=range] { flex: 1 1 auto; accent-color: var(--brand); min-width: 0; }
-.rfoot output { flex: 0 0 auto; text-align: right; font-family: var(--num); font-weight: 700; letter-spacing: .02em; }
-.strip { display: flex; gap: 8px; overflow-x: auto; padding: 4px 14px 8px; scrollbar-width: thin; }
-.strip button { all: unset; cursor: pointer; flex: 0 0 auto; display: grid; gap: 3px; text-align: center; font-family: var(--cond); font-size: 11px; color: rgba(253, 233, 239, .6); }
-.strip img { height: 76px; width: auto; aspect-ratio: 320 / 453; object-fit: cover; display: block; opacity: .6; border: 2px solid transparent; }
-.strip button:hover img, .strip button.on img { opacity: 1; }
-.strip button.on img { border-color: var(--brand); }
-.strip button:focus-visible img { outline: 2px solid var(--brand); }
-@media (max-width: 640px) {
-  .ibtn .lbl, .rbar .label { display: none; }
-  .ibtn { width: 38px; padding: 0; }
-  .rfoot .sec { display: none; }
-  .nav { width: 34px; height: 54px; font-size: 28px; }
-  .nav.prev { left: 0; } .nav.next { right: 0; }
-}
-body.reading { overflow: hidden; }
-</style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shizen Magazine</title>
+  <meta name="description" content="Shizen Magazine vol. 01: revista de streetwear e design sustentável para o público jovem. Projeto de conclusão de curso de Gabriel Pena Mota, Bacharelado em Design, Centro Universitário Senac.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Cpath d='M23 8H12c-2 0-3.5 1.4-3.6 3.2-.1 1.8 1.2 3 3 3.3l7 .9c.6.1.6.9 0 .9H8.5L7 24h12.5c2.2 0 3.9-1.5 4-3.4.1-1.8-1.3-3.1-3.1-3.3l-6.7-.9c-.6-.1-.6-.9 0-.9h8.1Z' fill='%23f6a9c0'/%3E%3C/svg%3E">
+  <script>
+    // aplica o tema antes de desenhar a página (evita piscar)
+    try { const t = localStorage.getItem("shizen-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Josefin+Sans:wght@700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/Draco.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="sheet">
-  <div class="wrap">
-    <header class="top">
-      <a class="wordmark" href="#inicio" aria-label="Shizen, início">Shizen</a>
-      <div class="top-right">
-        <nav aria-label="Seções do site">
-          <a href="#secoes">Seções</a>
-          <a href="#sobre">O projeto</a>
-          <a href="#paginas">Páginas</a>
-          <a href="#ler" data-open="1">Ler revista</a>
-        </nav>
-        <button class="theme-btn" type="button" id="themeBtn" aria-label="Ativar modo escuro"><span class="knob" aria-hidden="true">☾</span><span class="tlabel">Escuro</span></button>
-      </div>
-    </header>
+  <header class="topbar">
+    <a href="#" class="logo" aria-label="SHIZEN — início">SHIZEN</a>
+    <nav class="nav">
+      <a href="#leitor">Ler</a>
+      <a href="#edicao">Nesta edição</a>
+      <a href="#edicoes">Edições</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" aria-label="Alternar modo claro e escuro" title="Modo claro / escuro">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+    </button>
+  </header>
 
-    <main id="inicio">
-      <div class="hero">
-        <div class="hero-text">
-          <div class="edition"><b>Vol. 01</b><span>Maio 2026</span><span aria-hidden="true">·</span><span>82 páginas</span></div>
-          <h1><span class="wordmark">Shizen</span><span class="sub">Streetwear e design sustentável para o público jovem</span></h1>
-          <p class="tagline">Cultura · Hype · Estilo · Atitude</p>
-          <p class="by">Por <strong>Gabriel Pena Mota</strong>. Projeto de conclusão do Bacharelado em Design, Centro Universitário Senac, São Paulo.</p>
-          <div class="actions">
-            <button class="btn solid" type="button" data-open="1">Ler a revista <span aria-hidden="true">→</span></button>
-            <a class="btn" href="#secoes">Ver seções</a>
-          </div>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-text">
+        <p class="kicker" id="hero-kicker"></p>
+        <h1 class="hero-title">SHIZEN</h1>
+        <p class="tagline">CULTURA - HYPE - ESTILO - ATITUDE</p>
+        <p class="hero-lede">Streetwear e design sustentável para o público jovem: marcas independentes, música, arte urbana e o streetwear como linguagem.</p>
+        <div class="hero-actions">
+          <a class="btn btn-pink" href="#leitor" id="hero-read">Ler a edição</a>
+          <a class="btn btn-ghost" href="#edicoes">Todas as edições</a>
         </div>
-        <button class="cover-btn" type="button" data-open="1" aria-label="Abrir a revista na capa">
-          <img src="p/p001.jpg" alt="Capa da Shizen Magazine vol. 01: modelo de moletom rosa com capuz e calça marrom, deitado num sofá, com um jogo de videogame cobrindo o rosto" width="1100" height="1556">
+      </div>
+      <a class="hero-cover" href="#leitor" id="hero-cover" aria-label="Abrir a edição mais recente">
+        <img id="hero-cover-img" alt="Capa da edição mais recente da SHIZEN">
+        <span class="sticker">Chegou</span>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <!-- Leitor na própria página -->
+    <section class="reader" id="leitor" aria-label="Leitor da revista">
+      <div class="reader-head">
+        <h2 class="reader-heading">LEIA AGORA</h2>
+        <p class="reader-sub"><span id="reader-title"></span> · <span id="reader-count"></span></p>
+      </div>
+
+      <div class="book-area" id="book-area">
+        <button class="nav-btn prev" id="btn-prev" aria-label="Página anterior">
+          <svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg>
+        </button>
+        <div class="book-host" id="book-host"></div>
+        <button class="nav-btn next" id="btn-next" aria-label="Próxima página">
+          <svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg>
+        </button>
+        <p class="hint" id="hint">Clique na capa para abrir · arraste o canto para virar a página</p>
+      </div>
+
+      <div class="reader-tools">
+        <input type="range" class="scrubber" id="scrubber" min="1" value="1" aria-label="Ir para a página">
+        <button class="tool-btn" id="btn-thumbs" aria-label="Mostrar miniaturas" title="Miniaturas">
+          <svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+        </button>
+        <button class="tool-btn" id="btn-full" aria-label="Tela cheia" title="Tela cheia">
+          <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
         </button>
       </div>
-    </main>
-  </div>
-
-  <div class="ticker" aria-hidden="true"><span>Streetwear em foco <i>/</i> Por trás da marca <i>/</i> Sound &amp; Style <i>/</i> Impacto &amp; Sustentabilidade <i>/</i> Cultura de rua <i>/</i> Hip hop 80's SP na onda do break <i>/</i> Rolê urbano <i>/</i></span></div>
-
-  <div class="wrap">
-    <section id="secoes" aria-labelledby="sec-t">
-      <div class="head"><h2 id="sec-t"><span class="wordmark"><span class="sr">Sumário</span><span aria-hidden="true">Sum<span class="acc">a</span>rio</span></span></h2><p>Toque numa seção para abrir</p></div>
-      <ol class="sections" id="sections"></ol>
+      <div class="thumbs" id="thumbs" hidden></div>
     </section>
 
-    <section id="sobre" aria-labelledby="sobre-t">
-      <div class="head"><h2 id="sobre-t"><span class="wordmark">O projeto</span></h2><p>Sobre a revista</p></div>
+    <section class="block" id="edicao">
+      <div class="block-head">
+        <h2>Nesta edição</h2>
+        <p id="toc-sub"></p>
+      </div>
+      <ol class="toc" id="toc"></ol>
+    </section>
+
+    <section class="block" id="edicoes">
+      <div class="block-head">
+        <h2>Edições</h2>
+        <p>Escolha uma capa para ler.</p>
+      </div>
+      <div class="editions" id="editions"></div>
+    </section>
+
+    <section class="block" id="sobre">
+      <div class="block-head">
+        <h2>O projeto</h2>
+        <p>Sobre a revista</p>
+      </div>
       <div class="about">
-        <div class="text">
-          <p>A Shizen nasce de uma pergunta: como levar o streetwear sustentável até o público jovem? A moda é uma das indústrias que mais geram impacto ambiental, e o consumo acelerado entre os jovens só aumenta esse peso.</p>
+        <h3 class="graffiti" aria-hidden="true">Shizen</h3>
+        <div class="about-body">
+          <p>A <strong>Shizen</strong> nasce de uma pergunta: como levar o streetwear sustentável até o público jovem? A moda é uma das indústrias que mais geram impacto ambiental, e o consumo acelerado entre os jovens só aumenta esse peso.</p>
           <p>A revista fala a língua da rua. Mistura moda, música, arte urbana e hip hop com temas como upcycling, resíduos têxteis, descarte de embalagens e desmatamento, alinhada aos Objetivos de Desenvolvimento Sustentável 12, 13 e 15 da ONU.</p>
           <p>O projeto partiu da análise de duas marcas de streetwear sustentável, a Plant Faced Clothing e a King55, e de uma pesquisa bibliográfica e iconográfica apoiada em Ellen Lupton, Bruno Munari e Tatiane Massaro.</p>
-        </div>
-        <div class="facts">
-          <div class="fact"><h3>Autor</h3><p>Gabriel Pena Mota</p></div>
-          <div class="fact"><h3>Orientadora</h3><p>Prof. Dra. Luciana Chen</p></div>
-          <div class="fact"><h3>Instituição</h3><p>Centro Universitário Senac, Santo Amaro<br>Bacharelado em Design · São Paulo, 2026</p></div>
-          <div class="fact"><h3>ODS da ONU</h3><div class="chips"><span class="chip ods">12 Consumo responsável</span><span class="chip ods">13 Ação climática</span><span class="chip ods">15 Vida terrestre</span></div></div>
+          <dl class="facts">
+            <div><dt>Autor</dt><dd>Gabriel Pena Mota</dd></div>
+            <div><dt>Orientadora</dt><dd>Prof. Dra. Luciana Chen</dd></div>
+            <div><dt>Instituição</dt><dd>Centro Universitário Senac, Santo Amaro<br>Bacharelado em Design · São Paulo, 2026</dd></div>
+            <div><dt>ODS da ONU</dt><dd class="chips"><span>12 Consumo responsável</span><span>13 Ação climática</span><span>15 Vida terrestre</span></dd></div>
+          </dl>
         </div>
       </div>
     </section>
+  </main>
 
-    <section id="paginas" aria-labelledby="pag-t">
-      <div class="head"><h2 id="pag-t"><span class="wordmark"><span class="sr">Páginas</span><span aria-hidden="true">P<span class="acc">a</span>ginas</span></span></h2><p>Todas as 82 páginas</p></div>
-      <div class="grid" id="grid"></div>
-    </section>
+  <footer class="footer">
+    <span class="logo">SHIZEN</span>
+    <span>Shizen Magazine · Gabriel Pena Mota · Bacharelado em Design, Centro Universitário Senac · <span id="year"></span></span>
+  </footer>
 
-    <footer>
-      <div class="foot">
-        <span class="wordmark" aria-hidden="true">Shizen</span>
-        <p>Shizen Magazine, vol. 01, maio 2026<br>Gabriel Pena Mota · Bacharelado em Design<br>Centro Universitário Senac, São Paulo</p>
-      </div>
-      <div class="colorbar" aria-hidden="true"><i style="background:#ffec00"></i><i style="background:#e5007e"></i><i style="background:#009fe3"></i><i style="background:#312783"></i><i style="background:#009640"></i><i style="background:#e30613"></i><i style="background:#17110f"></i><i style="background:#fff59a"></i><i style="background:#f39ac1"></i><i style="background:#8ccdea"></i><i style="background:#9d9d9c"></i></div>
-    </footer>
-  </div>
-</div>
-
-<div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Leitor da revista" hidden>
-  <div class="rbar">
-    <span><span class="wordmark">Shizen</span><span class="label">&nbsp; Vol. 01 · Maio 2026</span></span>
-    <div class="rtools">
-      <button class="ibtn" type="button" id="zoomBtn" aria-pressed="false" title="Ampliar (Z)" aria-label="Ampliar"><span class="ic" aria-hidden="true">⊕</span><span class="lbl">Zoom</span></button>
-      <button class="ibtn" type="button" id="stripBtn" aria-pressed="false" title="Miniaturas (M)" aria-label="Miniaturas"><span class="ic" aria-hidden="true">▦</span><span class="lbl">Miniaturas</span></button>
-      <button class="ibtn" type="button" id="fsBtn" title="Tela cheia (F)" aria-label="Tela cheia"><span class="ic" aria-hidden="true">⛶</span><span class="lbl">Tela cheia</span></button>
-      <button class="ibtn" type="button" id="closeBtn" title="Fechar (Esc)" aria-label="Fechar leitor"><span class="ic" aria-hidden="true">✕</span></button>
-    </div>
-  </div>
-  <div class="stage" id="stage">
-    <div class="spread" id="spread"></div>
-    <button class="nav prev" type="button" id="prevBtn" aria-label="Página anterior">‹</button>
-    <button class="nav next" type="button" id="nextBtn" aria-label="Próxima página">›</button>
-  </div>
-  <div class="rbottom">
-    <div class="strip" id="strip" hidden></div>
-    <div class="rfoot">
-      <span class="sec" id="secName"></span>
-      <input type="range" id="slider" min="1" max="82" value="1" aria-label="Ir para a página">
-      <output id="count" for="slider">1 / 82</output>
-    </div>
-  </div>
-</div>
-
-<script>
-(() => {
-  // ---- tema claro / escuro ----
-  const root = document.documentElement;
-  const themeBtn = document.getElementById('themeBtn');
-  const sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : sysDark.matches;
-  const paintThemeBtn = () => {
-    const d = isDark();
-    themeBtn.querySelector('.knob').textContent = d ? '☀' : '☾';
-    themeBtn.querySelector('.tlabel').textContent = d ? 'Claro' : 'Escuro';
-    themeBtn.setAttribute('aria-label', d ? 'Ativar modo claro' : 'Ativar modo escuro');
-  };
-  try { const saved = localStorage.getItem('shizen-theme'); if (saved === 'dark' || saved === 'light') root.dataset.theme = saved; } catch (e) {}
-  themeBtn.addEventListener('click', () => {
-    const next = isDark() ? 'light' : 'dark';
-    root.dataset.theme = next;
-    try { localStorage.setItem('shizen-theme', next); } catch (e) {}
-    paintThemeBtn();
-  });
-  sysDark.addEventListener && sysDark.addEventListener('change', paintThemeBtn);
-  new MutationObserver(paintThemeBtn).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
-  paintThemeBtn();
-
-  // ---- conteúdo ----
-  const TOTAL = 82;
-  const RATIO = 1100 / 1556; // largura / altura da página
-  const FLIP_MS = 720;
-  const pad = n => String(n).padStart(3, '0');
-  const big = n => `p/p${pad(n)}.jpg`;
-  const thumb = n => `t/p${pad(n)}.jpg`;
-  const SECTIONS = [
-    [1, 'Capa', 'Vol. 01, maio 2026'],
-    [2, 'Palavras do editor', ''],
-    [4, 'Streetwear em foco', 'Plant Faced Clothing, King55, Skylrk e upcycling'],
-    [12, 'Por trás da marca', 'Entrevista e ensaio de moda'],
-    [22, 'Sound & Style', 'Justin Bieber, Travis Scott, Rosalía, Tyler, The Creator'],
-    [40, 'Impacto & Sustentabilidade', 'Fast fashion e sustentabilidade em ação'],
-    [47, 'Cultura de rua', 'Slawn e a arte urbana'],
-    [60, "Hip hop 80's SP", 'Exposição São Paulo na onda do break'],
-    [72, 'Rolê urbano', 'Guia de cafés e lugares em São Paulo'],
-    [82, 'Contracapa', '']
-  ];
-  const sectionOf = n => { let s = SECTIONS[0][1]; for (const [p, t] of SECTIONS) if (n >= p) s = t; return s; };
-
-  const sections = document.getElementById('sections');
-  SECTIONS.forEach(([p, t, s]) => {
-    const li = document.createElement('li');
-    li.innerHTML = `<button type="button" data-page="${p}"><span class="img"><img src="${thumb(p)}" alt="" loading="lazy" width="320" height="453"><span class="num">p. ${String(p).padStart(2, '0')}</span></span><span class="t">${t}${s ? `<small>${s}</small>` : ''}</span></button>`;
-    sections.appendChild(li);
-  });
-  const grid = document.getElementById('grid');
-  for (let n = 1; n <= TOTAL; n++) {
-    const b = document.createElement('button');
-    b.type = 'button'; b.dataset.page = n; b.setAttribute('aria-label', `Abrir página ${n}`);
-    b.innerHTML = `<img src="${thumb(n)}" alt="" loading="lazy" width="320" height="453"><span>${String(n).padStart(2, '0')}</span>`;
-    grid.appendChild(b);
-  }
-
-  // ---- leitor ----
-  const $ = id => document.getElementById(id);
-  const reader = $('reader'), stage = $('stage'), spread = $('spread'), slider = $('slider'), count = $('count');
-  const strip = $('strip'), prevBtn = $('prevBtn'), nextBtn = $('nextBtn'), zoomBtn = $('zoomBtn'), stripBtn = $('stripBtn'), secName = $('secName');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let page = 1, lastFocus = null, shown = [], finishFlip = null;
-
-  // duas páginas lado a lado só quando a tela é larga o bastante para que cada uma fique legível
-  const isTwoUp = () => {
-    const w = stage.clientWidth || innerWidth, h = stage.clientHeight || innerHeight;
-    return w >= 760 && w / h >= 1.15;
-  };
-  // capa sozinha; depois pares 2–3, 4–5 …; a última (82) fica sozinha
-  const pagesFor = p => {
-    if (!isTwoUp() || p === 1) return [p];
-    const left = p % 2 === 0 ? p : p - 1;
-    return left + 1 <= TOTAL ? [left, left + 1] : [left];
-  };
-  const step = dir => { const cur = pagesFor(page); return dir > 0 ? cur[cur.length - 1] + 1 : cur[0] - 1; };
-
-  for (let n = 1; n <= TOTAL; n++) {
-    const b = document.createElement('button');
-    b.type = 'button'; b.dataset.goto = n; b.setAttribute('aria-label', `Página ${n}`);
-    b.innerHTML = `<img src="${thumb(n)}" alt="" loading="lazy"><span>${n}</span>`;
-    strip.appendChild(b);
-  }
-
-  // dimensiona as páginas para caber exatamente no espaço disponível
-  function fit() {
-    const imgs = spread.querySelectorAll('img.pg');
-    if (!imgs.length) return;
-    const zoomed = stage.classList.contains('zoomed');
-    const narrow = stage.clientWidth < 640;
-    const padX = zoomed ? 0 : (narrow ? 8 : 64), padY = zoomed ? 0 : (narrow ? 8 : 16);
-    const W = Math.max(100, stage.clientWidth - padX * 2), H = Math.max(100, stage.clientHeight - padY * 2);
-    let w, h;
-    if (zoomed) { w = Math.min(stage.clientWidth - (narrow ? 0 : 16), 1100); h = w / RATIO; }
-    else { h = Math.min(H, W / (imgs.length * RATIO)); w = h * RATIO; }
-    imgs.forEach(img => { img.style.width = Math.floor(w) + 'px'; img.style.height = Math.floor(h) + 'px'; });
-  }
-
-  function build(ps, fade) {
-    spread.className = 'spread' + (ps.length === 2 ? ' two' : '');
-    spread.innerHTML = ps.map(n => `<img class="pg" src="${big(n)}" alt="Página ${n} da Shizen Magazine" draggable="false" width="1100" height="1556">`).join('');
-    shown = ps;
-    fit();
-    if (fade && !reduceMotion.matches) { void spread.offsetWidth; spread.classList.add('fade'); }
-  }
-
-  function updateUi(ps) {
-    count.textContent = `${ps.length === 2 ? `${ps[0]}–${ps[1]}` : ps[0]} / ${TOTAL}`;
-    secName.textContent = sectionOf(ps[0]);
-    slider.value = ps[0];
-    prevBtn.disabled = ps[0] <= 1;
-    nextBtn.disabled = ps[ps.length - 1] >= TOTAL;
-    strip.querySelectorAll('button').forEach(b => b.classList.toggle('on', ps.includes(+b.dataset.goto)));
-    const on = strip.querySelector('button.on');
-    if (on && !strip.hidden) strip.scrollTo({ left: on.offsetLeft - strip.clientWidth / 2 + on.clientWidth / 2 });
-    if (stage.classList.contains('zoomed')) stage.scrollTop = 0;
-    const nb = [ps[ps.length - 1] + 1, ps[ps.length - 1] + 2, ps[0] - 1, ps[0] - 2];
-    nb.forEach(n => { if (n >= 1 && n <= TOTAL) new Image().src = big(n); });
-    try { history.replaceState(null, '', '#p' + ps[0]); } catch (e) {}
-  }
-
-  const decoded = src => { const i = new Image(); i.src = src; return (i.decode ? i.decode() : Promise.resolve()).catch(() => {}); };
-  const face = (cls, src) => `<div class="face ${cls}">${src ? `<img src="${src}" alt="" draggable="false">` : ''}<span class="shade"></span></div>`;
-
-  // anima uma folha girando na lombada, como numa revista de papel
-  async function flip(to, dir) {
-    const two = to.length === 2, fwd = dir > 0;
-    await Promise.race([Promise.all(to.map(n => decoded(big(n)))), new Promise(r => setTimeout(r, 450))]);
-    if (finishFlip) finishFlip();
-    const from = shown;
-    const imgs = spread.querySelectorAll('img.pg');
-    if (!imgs.length || from.length !== to.length || from[0] === to[0] || reader.hidden || stage.classList.contains('zoomed')) { build(to); return; }
-
-    // qual página levanta, o que aparece no verso e o que fica por baixo
-    let target, spine, front, back, startDeg, endDeg, underImg, underSrc;
-    if (two && fwd)       { target = imgs[1]; spine = 'l'; front = big(from[1]); back = big(to[0]); startDeg = 0; endDeg = -180; underImg = imgs[1]; underSrc = big(to[1]); }
-    else if (two)         { target = imgs[0]; spine = 'r'; front = big(from[0]); back = big(to[1]); startDeg = 0; endDeg = 180;  underImg = imgs[0]; underSrc = big(to[0]); }
-    else if (fwd)         { target = imgs[0]; spine = 'l'; front = big(from[0]); back = '';         startDeg = 0; endDeg = -180; underImg = imgs[0]; underSrc = big(to[0]); }
-    else                  { target = imgs[0]; spine = 'l'; front = big(to[0]);   back = '';         startDeg = -180; endDeg = 0; underImg = null; underSrc = ''; }
-
-    const leaf = document.createElement('div');
-    leaf.className = 'leaf spine-' + spine;
-    Object.assign(leaf.style, { left: target.offsetLeft + 'px', top: target.offsetTop + 'px', width: target.offsetWidth + 'px', height: target.offsetHeight + 'px' });
-    leaf.innerHTML = face('front', front) + face('back', back);
-    // sombra projetada sobre a página de baixo
-    const under = document.createElement('div');
-    under.className = 'under-shade';
-    Object.assign(under.style, { left: target.offsetLeft + 'px', top: target.offsetTop + 'px', width: target.offsetWidth + 'px', height: target.offsetHeight + 'px',
-      background: `linear-gradient(to ${spine === 'l' ? 'right' : 'left'}, rgba(0,0,0,.45), rgba(0,0,0,0) 70%)` });
-    if (underImg) underImg.src = underSrc;
-    spread.append(under, leaf);
-
-    const opts = { duration: FLIP_MS, easing: 'cubic-bezier(.42,.08,.32,1)', fill: 'forwards' };
-    const anims = [
-      leaf.animate([
-        { transform: `perspective(2600px) rotateY(${startDeg}deg)` },
-        { transform: `perspective(2600px) rotateY(${(startDeg + endDeg) / 2}deg) scale(1.015)`, offset: .5 },
-        { transform: `perspective(2600px) rotateY(${endDeg}deg)` }
-      ], opts),
-      leaf.querySelector('.front .shade').animate(fwd || two ? [{ opacity: 0 }, { opacity: .9 }] : [{ opacity: .9 }, { opacity: 0 }], opts),
-      leaf.querySelector('.back .shade').animate(fwd || two ? [{ opacity: .9 }, { opacity: 0 }] : [{ opacity: 0 }, { opacity: .9 }], opts),
-      under.animate([{ opacity: 0 }, { opacity: 1, offset: .45 }, { opacity: 0 }], opts)
-    ];
-    let done = false;
-    const end = () => { if (done) return; done = true; finishFlip = null; anims.forEach(a => a.cancel()); leaf.remove(); under.remove(); build(to); };
-    finishFlip = end;
-    anims[0].finished.then(end, () => {});
-    setTimeout(end, FLIP_MS + 500); // garantia caso o navegador pause a animação
-  }
-
-  function render(dir = 0) {
-    const ps = pagesFor(page);
-    updateUi(ps);
-    const canFlip = dir && !reader.hidden && shown.length && shown.length === ps.length && shown[0] !== ps[0]
-      && !stage.classList.contains('zoomed') && !reduceMotion.matches && 'animate' in Element.prototype;
-    if (canFlip) { flip(ps, dir); return; }
-    if (finishFlip) finishFlip();
-    build(ps, !!dir);
-  }
-  function go(n, dir = 0) {
-    n = Math.max(1, Math.min(TOTAL, n));
-    if (pagesFor(n)[0] === pagesFor(page)[0]) return;
-    page = n; render(dir);
-  }
-  function open(n = 1) {
-    lastFocus = document.activeElement;
-    reader.hidden = false; document.body.classList.add('reading');
-    shown = [];
-    page = Math.max(1, Math.min(TOTAL, n)); render();
-    nextBtn.focus({ preventScroll: true });
-  }
-  function close() {
-    if (finishFlip) finishFlip();
-    reader.hidden = true; document.body.classList.remove('reading');
-    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
-    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
-    if (lastFocus) lastFocus.focus({ preventScroll: true });
-  }
-  const toggleZoom = () => { if (finishFlip) finishFlip(); const z = stage.classList.toggle('zoomed'); zoomBtn.setAttribute('aria-pressed', z); fit(); stage.scrollTop = 0; };
-  const toggleStrip = () => { strip.hidden = !strip.hidden; stripBtn.setAttribute('aria-pressed', !strip.hidden); relayout(); };
-
-  document.addEventListener('click', e => {
-    const o = e.target.closest('[data-open]');
-    if (o) { e.preventDefault(); open(1); return; }
-    const p = e.target.closest('[data-page]');
-    if (p) { open(+p.dataset.page); return; }
-    const g = e.target.closest('[data-goto]');
-    if (g) { const n = +g.dataset.goto; go(n, n > page ? 1 : -1); }
-  });
-  prevBtn.addEventListener('click', () => go(step(-1), -1));
-  nextBtn.addEventListener('click', () => go(step(1), 1));
-  slider.addEventListener('input', () => go(+slider.value));
-  zoomBtn.addEventListener('click', toggleZoom);
-  stripBtn.addEventListener('click', toggleStrip);
-  $('closeBtn').addEventListener('click', close);
-  $('fsBtn').addEventListener('click', () => {
-    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
-    else if (reader.requestFullscreen) reader.requestFullscreen().catch(() => {});
-  });
-  spread.addEventListener('dblclick', toggleZoom);
-
-  document.addEventListener('keydown', e => {
-    if (reader.hidden || e.target === slider) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(step(1), 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(step(-1), -1); }
-    else if (e.key === 'Home') go(1, -1);
-    else if (e.key === 'End') go(TOTAL, 1);
-    else if (e.key === 'Escape') close();
-    else if (e.key === 'z' || e.key === 'Z') toggleZoom();
-    else if (e.key === 'm' || e.key === 'M') toggleStrip();
-    else if (e.key === 'f' || e.key === 'F') $('fsBtn').click();
-  });
-
-  // deslizar no celular
-  let sx = null, sy = null;
-  stage.addEventListener('touchstart', e => { if (stage.classList.contains('zoomed') || e.touches.length > 1) { sx = null; return; } sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
-  stage.addEventListener('touchend', e => {
-    if (sx === null) return;
-    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) go(step(dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
-    sx = null;
-  });
-  // ao girar o celular ou redimensionar a janela, refaz o layout
-  function relayout() {
-    if (reader.hidden) return;
-    if (finishFlip) finishFlip();
-    if (pagesFor(page).length !== shown.length) render(); else fit();
-  }
-  addEventListener('resize', relayout);
-  addEventListener('orientationchange', relayout);
-  if (window.ResizeObserver) new ResizeObserver(relayout).observe(stage);
-
-  const m = /^#p(\d+)$/.exec(location.hash);
-  if (m) open(+m[1]);
-})();
-</script>
-
+  <script src="vendor/page-flip.browser.js"></script>
+  <script src="editions/editions.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
